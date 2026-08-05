@@ -1,6 +1,0 @@
-api
-db
-firebase
-middleware
-models
-schemas
