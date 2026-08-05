@@ -74,3 +74,9 @@ class Hospital(Base):
         back_populates="hospital",
         cascade="all, delete-orphan",
     )
+
+    appointments = relationship(
+        "Appointment",
+        back_populates="hospital",
+        cascade="all, delete-orphan",
+    )

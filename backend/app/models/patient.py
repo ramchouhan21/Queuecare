@@ -41,3 +41,9 @@ class Patient(Base):
     )
 
     user = relationship("User", back_populates="patient", uselist=False)
+
+    appointments = relationship(
+        "Appointment",
+        back_populates="patient",
+        cascade="all, delete-orphan",
+    )
