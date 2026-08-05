@@ -3,6 +3,7 @@ from enum import Enum
 
 from sqlalchemy import Boolean, Column, DateTime, Enum as SQLEnum, Float, Integer, String, func
 from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import relationship
 
 from app.db.base import Base
 
@@ -64,6 +65,12 @@ class Hospital(Base):
 
     departments = relationship(
         "Department",
+        back_populates="hospital",
+        cascade="all, delete-orphan",
+    )
+
+    doctors = relationship(
+        "Doctor",
         back_populates="hospital",
         cascade="all, delete-orphan",
     )

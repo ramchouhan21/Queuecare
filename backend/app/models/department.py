@@ -1,6 +1,6 @@
 import uuid
 
-from sqlalchemy import Boolean, Column, DateTime, Float, ForeignKey, String, func
+from sqlalchemy import Boolean, Column, DateTime, Float, ForeignKey, Numeric, String, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 
@@ -25,7 +25,7 @@ class Department(Base):
     code = Column(String(64), nullable=False, index=True)
     description = Column(String(1024), nullable=True)
     floor = Column(String(50), nullable=True)
-    consultation_fee = Column(Float, nullable=True)
+    consultation_fee = Column(Numeric(10, 2), nullable=True)
     is_active = Column(Boolean, nullable=False, default=True)
     created_at = Column(
         DateTime(timezone=True),
@@ -42,4 +42,10 @@ class Department(Base):
     hospital = relationship(
         "Hospital",
         back_populates="departments",
+    )
+
+    doctors = relationship(
+        "Doctor",
+        back_populates="department",
+        cascade="all, delete-orphan",
     )

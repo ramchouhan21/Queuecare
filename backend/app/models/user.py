@@ -34,13 +34,20 @@ class User(Base):
     )
     updated_at = Column(
         DateTime(timezone=True),
-        default=func.now(),
+        server_default=func.now(),
         onupdate=func.now(),
         nullable=False,
     )
 
     patient = relationship(
         "Patient",
+        back_populates="user",
+        uselist=False,
+        cascade="all, delete-orphan",
+    )
+
+    doctor = relationship(
+        "Doctor",
         back_populates="user",
         uselist=False,
         cascade="all, delete-orphan",
