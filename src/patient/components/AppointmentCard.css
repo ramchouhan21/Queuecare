@@ -1,0 +1,39 @@
+.appointment-card {
+  padding: 28px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.card-header h2 {
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+  color: #102a44;
+}
+
+.appointment-content p {
+  margin: 0;
+  color: #4f687e;
+  line-height: 1.8;
+}
+
+.appointment-time {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #102a44;
+}
+
+.appointment-location {
+  margin: 10px 0 16px;
+  font-size: 1rem;
+  color: #1d63d0;
+}
+
+.appointment-notes {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 22px;
+  background: #f7fafd;
+}

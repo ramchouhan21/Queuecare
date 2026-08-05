@@ -1,0 +1,45 @@
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.how-card {
+  padding: 32px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.how-card:hover,
+.how-card:focus-within {
+  transform: translateY(-6px);
+}
+
+.how-card__number {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1d63d0;
+  margin-bottom: 18px;
+}
+
+.how-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: #102a44;
+}
+
+.how-card p {
+  margin: 0;
+  color: #4f687e;
+  line-height: 1.8;
+}
+
+@media (max-width: 960px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+}

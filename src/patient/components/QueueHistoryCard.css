@@ -1,0 +1,48 @@
+.queue-history-card {
+  padding: 28px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.queue-history-card h2 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  color: #102a44;
+}
+
+.queue-history-card p {
+  margin: 0 0 22px;
+  color: #4f687e;
+}
+
+.history-table {
+  display: grid;
+  gap: 14px;
+}
+
+.history-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #f7fafd;
+  color: #102a44;
+}
+
+.history-row--header {
+  font-weight: 700;
+  background: #e8f3ff;
+}
+
+@media (max-width: 720px) {
+  .history-row {
+    grid-template-columns: 1fr;
+  }
+
+  .history-row--header {
+    display: none;
+  }
+}

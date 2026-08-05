@@ -1,0 +1,11 @@
+# Ignore local environment files
+.env
+.env.*
+
+# Ignore Firebase service account keys
+firebase-service-account.json
+serviceAccountKey.json
+
+# Ignore IDE and OS files
+.vscode/
+.DS_Store

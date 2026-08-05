@@ -1,0 +1,137 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: linear-gradient(180deg, #f7f9fb 0%, #eaf0f8 100%);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 26px 60px rgba(17, 41, 79, 0.14);
+  padding: 34px;
+  border: 1px solid rgba(75, 118, 167, 0.09);
+}
+
+.register-card__header {
+  margin-bottom: 28px;
+}
+
+.register-card__header h1 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  color: #102a44;
+}
+
+.register-card__header p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4f6d8c;
+  line-height: 1.5;
+}
+
+.register-form {
+  display: grid;
+  gap: 18px;
+}
+
+.register-form__error {
+  padding: 14px 16px;
+  background: #fdecea;
+  color: #b82f2f;
+  border-radius: 12px;
+  border: 1px solid #f4c7c5;
+}
+
+.register-field {
+  display: grid;
+  gap: 10px;
+}
+
+.register-field label {
+  font-size: 0.95rem;
+  color: #23364a;
+}
+
+.register-field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #dfe7ef;
+  background: #f8fbfe;
+  color: #102a44;
+  font-size: 1rem;
+}
+
+.register-field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 92, 191, 0.12);
+  border-color: #1d63d0;
+}
+
+.password-input-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: #1d63d0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #3c536c;
+}
+
+.checkbox-field input {
+  width: 18px;
+  height: 18px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1d63d0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.register-button:disabled {
+  background: #94b4e5;
+  cursor: not-allowed;
+}
+
+.register-button:hover:not(:disabled) {
+  background: #154fa5;
+}
+
+@media (max-width: 560px) {
+  .register-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .register-card__header h1 {
+    font-size: 1.5rem;
+  }
+}

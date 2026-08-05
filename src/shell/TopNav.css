@@ -1,0 +1,34 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: linear-gradient(90deg, #ffffff 0%, #f8fbff 100%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.top-nav__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #102a44;
+}
+
+.top-nav__meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.top-nav__role,
+.top-nav__user {
+  font-size: 0.95rem;
+  color: #4f687e;
+}
+
+@media (max-width: 860px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

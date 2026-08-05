@@ -1,0 +1,32 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: #f8fafd;
+  color: #102a44;
+}
+
+.error-boundary h1 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+}
+
+.error-boundary p {
+  margin: 0 0 12px;
+  color: #4f687e;
+  max-width: 620px;
+  text-align: center;
+}
+
+.error-boundary pre {
+  margin: 0;
+  background: #eef4fb;
+  padding: 16px;
+  border-radius: 16px;
+  color: #1d63d0;
+  max-width: 720px;
+  overflow-x: auto;
+}
