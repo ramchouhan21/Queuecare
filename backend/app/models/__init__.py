@@ -1,4 +1,8 @@
 """Database models package.
 
-This package will hold SQLAlchemy ORM model definitions for the QueueCare API.
+This package contains SQLAlchemy ORM definitions for the QueueCare API.
 """
+
+from app.models.user import User
+
+__all__ = ["User"]
