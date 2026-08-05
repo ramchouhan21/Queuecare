@@ -2,6 +2,7 @@ import uuid
 
 from sqlalchemy import Boolean, Column, DateTime, Enum as SQLEnum, String, func
 from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import relationship
 
 from app.db.base import Base
 from app.models.roles import RoleEnum
@@ -36,4 +37,11 @@ class User(Base):
         default=func.now(),
         onupdate=func.now(),
         nullable=False,
+    )
+
+    patient = relationship(
+        "Patient",
+        back_populates="user",
+        uselist=False,
+        cascade="all, delete-orphan",
     )
