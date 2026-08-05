@@ -10,5 +10,6 @@ from app.models.hospital import Hospital
 from app.models.patient import Patient
 from app.models.queue import Queue
 from app.models.user import User
+from app.models.notification import Notification
 
-__all__ = ["Appointment", "Department", "Doctor", "Hospital", "Patient", "Queue", "User"]
+__all__ = ["Appointment", "Department", "Doctor", "Hospital", "Patient", "Queue", "User", "Notification"]
