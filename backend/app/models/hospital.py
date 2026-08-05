@@ -61,3 +61,9 @@ class Hospital(Base):
         onupdate=func.now(),
         nullable=False,
     )
+
+    departments = relationship(
+        "Department",
+        back_populates="hospital",
+        cascade="all, delete-orphan",
+    )
