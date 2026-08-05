@@ -101,3 +101,9 @@ class Appointment(Base):
     doctor = relationship("Doctor", back_populates="appointments")
     hospital = relationship("Hospital", back_populates="appointments")
     department = relationship("Department", back_populates="appointments")
+
+    queues = relationship(
+        "Queue",
+        back_populates="appointment",
+        cascade="all, delete-orphan",
+    )
